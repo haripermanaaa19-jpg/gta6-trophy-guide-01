@@ -3,23 +3,63 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>GTA VI trophy checklist</title>
+<title>Leonida Legend — GTA VI Trophy Guide &amp; Tracker</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-  <h1>GTA VI trophy checklist</h1>
-  <p id="progress">0 of 55 earned</p>
+<header class="masthead">
+  <div class="masthead-inner">
+    <div>
+      <h1>Leonida Legend</h1>
+      <p class="tagline">The GTA VI trophy guide &amp; tracker: all 55 PlayStation 5 trophies, a cited guide for each, the platinum roadmap, and the missables flagged.</p>
+    </div>
+    <div class="progress-box" aria-live="polite">
+      <div class="progress-line"><span id="progress-count">0 of 55</span><span id="progress-pct">0%</span></div>
+      <div class="progress-bar"><div id="progress-fill"></div></div>
+      <div class="grade-chips" id="grade-chips"></div>
+    </div>
+  </div>
 </header>
-<div class="controls">
-  <label>Grade <select id="grade"><option value="all">All</option><option value="platinum">Platinum</option><option value="gold">Gold</option><option value="silver">Silver</option><option value="bronze">Bronze</option></select></label>
-  <button id="export" type="button">Export progress</button>
-  <label class="import">Import progress <input id="import" type="file" accept="application/json"></label>
-</div>
-<table>
-  <thead><tr><th>Earned</th><th>Trophy</th><th>Grade</th><th>How to get it</th></tr></thead>
-  <tbody id="rows"></tbody>
-</table>
+
+<nav class="view-tabs" aria-label="Views">
+  <button type="button" id="tab-checklist" class="tab active">Checklist</button>
+  <button type="button" id="tab-roadmap" class="tab">Roadmap to the platinum</button>
+</nav>
+
+<main>
+  <section id="view-checklist">
+    <div class="toolbar">
+      <input id="search" type="search" placeholder="Search trophies…" aria-label="Search trophies">
+      <div class="chips" id="kind-chips" role="group" aria-label="Filter by kind"></div>
+      <label class="grade-label">Grade
+        <select id="grade-filter">
+          <option value="all">All grades</option>
+          <option value="platinum">Platinum</option>
+          <option value="gold">Gold</option>
+          <option value="silver">Silver</option>
+          <option value="bronze">Bronze</option>
+        </select>
+      </label>
+      <label class="switch" title="Hide the names and descriptions of hidden trophies until they are earned">
+        <input type="checkbox" id="spoiler-toggle" checked> Spoiler protection
+      </label>
+      <button type="button" id="export-btn">Export progress</button>
+      <label class="import-label">Import progress <input id="import-file" type="file" accept="application/json"></label>
+    </div>
+    <p class="list-note" id="list-note"></p>
+    <div id="trophy-list"></div>
+  </section>
+
+  <section id="view-roadmap" hidden>
+    <p class="roadmap-intro">Six stages, in play order, built from the official trophy descriptions and the counts PlayStation tracks. One trophy is reported missable, the Chapter 1 meditation inside <strong>Positive Mental Attitude</strong>; it is flagged in stage 1 and in the checklist. No trophy in this list is online. Tap any trophy to open its guide.</p>
+    <div id="roadmap-list"></div>
+  </section>
+</main>
+
+<footer>
+  <p>Works fully offline; your progress never leaves this browser. Trophy names, descriptions and grades are the official PlayStation list as published by Exophase and PSNProfiles. Guides are written for this app and cite their sources on every trophy. Not affiliated with Rockstar Games or PlayStation.</p>
+</footer>
+
 <script type="module" src="app.js"></script>
 </body>
 </html>

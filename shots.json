@@ -1,5 +1,6 @@
 [
-  { "file": "1-checklist.jpg", "path": "/", "viewport": { "width": 1280, "height": 800 } },
-  { "file": "2-silver.jpg", "path": "/", "grade": "silver", "viewport": { "width": 1280, "height": 800 } },
-  { "file": "3-bronze.jpg", "path": "/", "grade": "bronze", "scroll": 1400, "viewport": { "width": 1280, "height": 800 } }
+  { "file": "1-cover.jpg", "path": "/?demo=1", "note": "The checklist in use: demo progress (19 of 55), grade chips, search, kind filters, spoiler protection on, trophy cards with official names, descriptions and grades.", "viewport": { "width": 1280, "height": 800 } },
+  { "file": "2-guide.jpg", "path": "/?demo=1&open=28", "note": "One trophy's guide open: Positive Mental Attitude, flagged MISSABLE, with its counter, the Chapter 1 warning and its sources.", "viewport": { "width": 1280, "height": 800 } },
+  { "file": "3-roadmap.jpg", "path": "/?demo=1&view=roadmap", "note": "The roadmap to the platinum: stage 1 with the missable warning, stage trophies shown as chips with earned state.", "viewport": { "width": 1280, "height": 800 } },
+  { "file": "4-missable.jpg", "path": "/?demo=1&filter=missable", "note": "The missable filter: the six flagged trophies (the meditation trophy and the five story-windowed stranger strands).", "viewport": { "width": 1280, "height": 800 } }
 ]
